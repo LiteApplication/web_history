@@ -1,46 +1,56 @@
-#page {
-    width: 100%;
-    height: 100%;
-    padding-top: 0;
-}
-
 body {
-    background-color: black;
-    color: white;
-}
-
-#title {
-    margin: 0;
-    font-family: ProductSansBold;
-}
-
-#title-position {
-    position: absolute;
-    top: 50%;
-    transform: translate(50%, -50%);
-    padding-left: 5em;
-}
-
-#subtitle {
-    font-family: ProductSansRegular;
-    margin-top: 0px;
-    width: fit-content;
-}
-
-#title-logo {
-    width: 50%;
-    height: 15em;
-    position: relative;
+    background-color: white;
+    color: black;
 }
 
 header {
     width: 100%;
     height: auto;
-    padding: 1em;
+    display: flex;
+
+    padding-top: 10em;
 }
-header img {
-    height: 100px;
-    width: auto;
-    position: relative;
-    right: 0;
+
+.half-width {
+    width: 50%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.dflex {
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: "ProductSansBold", sans-serif;
+    margin: 0;
+    font-size: 4em;
+}
+header h3 {
+    font-family: "ProductSansBold", sans-serif;
+    margin: 0;
+    font-size: 2em;
+}
+
+#favicon {
+    height: 8em;
+    margin-right: 0.5em;
+}
+
+#title-container {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#image-header {
+    width: 50%;
 }
