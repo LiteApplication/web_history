@@ -27,13 +27,11 @@ header {
 }
 
 header h1 {
-    font-family: "ProductSansBold", sans-serif;
     margin: 0;
     font-size: 4em;
 }
 
 header h3 {
-    font-family: "ProductSansBold", sans-serif;
     margin: 0;
     font-size: 2em;}
 
@@ -63,7 +61,6 @@ header .button {
     background-color: black;
     border-style: solid;
     text-align: center;
-    font-family: ProductSansRegular;
     color: white;
     transition: all 1s;
     margin: 1em;
@@ -91,7 +88,6 @@ header .button:active {
     background-color: black;
     border-style: solid;
     text-align: center;
-    font-family: ProductSansRegular;
     transition: all 0.25s;
     background-color: black;
     color: white;
