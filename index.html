@@ -24,17 +24,21 @@
         </div>
         <div class="half-width full-height">
             <div class="full-width" style="height: 10em;">
-                <div id="introduction" class="button">
+                <div onclick="toggleIntroduction('special')" id="introduction" class="button">
                     <span>Introduction</span>
                 </div>
-                <div id="summary" class="button">
+                <div onclick="toggleSummary()" id="summary" class="button">
                     <span>Sommaire</span>
                 </div>
-                <div id="informations" class="button">
+                <div onclick="toggleInformations()" id="informations" class="button">
                     <span>Informations</span>
                 </div>
             </div>
     </header>
+    <div class="full-height full-width">
+        <iframe id="viewer" class="full-height full-width" src="./blank.html" frameborder="0">This page doesn't work</iframe>
+    </div>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

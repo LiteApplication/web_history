@@ -75,10 +75,27 @@ header .button:hover {
     border-color: white;    
     margin-left: 2.5em;
 }
-header .button:active > #favicon {
+header .button:active {
     transition: all 0.25s;
     background-color: black;
     color: white;
     border-color: blue;    
+    margin-left: -1em;
+}
+.button-active {
+    cursor: pointer;
+    border-radius: 10px 3px 10px 3px;
+    width: 25vw;
+    height: 30px;
+    justify-content: center;
+    background-color: black;
+    border-style: solid;
+    text-align: center;
+    font-family: ProductSansRegular;
+    transition: all 0.25s;
+    background-color: black;
+    color: white;
+    border-color: blue;
+    margin: 1em;   
     margin-left: -1em;
 }
