@@ -1,11 +1,11 @@
 @font-face {
     font-family: ProductSansRegular;
-    src: url("../font/Product\ Sans\ Regular.ttf");
+    src: url("../font/ProductSansRegular.ttf");
 }
 
 @font-face {
     font-family: ProductSansBold;
-    src: url("../font/Product\ Sans\ Bold.ttf");
+    src: url("../font/ProductSansBold.ttf");
 }
 body {
     font-family: ProductSansRegular;
