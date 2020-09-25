@@ -100,3 +100,12 @@ header .button:active {
     margin: 1em;
     margin-left: 0;
 }
+
+#viewer {
+    opacity: 1;
+    transition: opacity 0.25s, transform 1s ease-in-out;
+}
+#viewer.hide {
+    transform: translateY(-1em);
+    opacity: 0;
+}
