@@ -1,13 +1,11 @@
 body {
-    background-color: white;
-    color: black;
-}
+    background-color: black;
+    color: white;}
 
 header {
     width: 100%;
     height: auto;
     display: flex;
-
     padding-top: 10em;
 }
 
@@ -33,11 +31,11 @@ header h1 {
     margin: 0;
     font-size: 4em;
 }
+
 header h3 {
     font-family: "ProductSansBold", sans-serif;
     margin: 0;
-    font-size: 2em;
-}
+    font-size: 2em;}
 
 #favicon {
     height: 8em;
@@ -51,6 +49,36 @@ header h3 {
     margin-top: auto;
     margin-bottom: auto;
 }
+
 #image-header {
     width: 50%;
+}
+
+header .button {
+    cursor: pointer;
+    border-radius: 10px 3px 10px 3px;
+    width: 25vw;
+    height: 30px;
+    justify-content: center;
+    background-color: black;
+    border-style: solid;
+    text-align: center;
+    font-family: ProductSansRegular;
+    color: white;
+    transition: all 1s;
+    margin: 1em;
+}
+
+header .button:hover {
+    background-color: white;
+    color: black;
+    border-color: white;    
+    margin-left: 2.5em;
+}
+header .button:active > #favicon {
+    transition: all 0.25s;
+    background-color: black;
+    color: white;
+    border-color: blue;    
+    margin-left: -1em;
 }
