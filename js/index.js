@@ -27,7 +27,7 @@ function toggleButton(el) {
     el.classList = ["button-active"];
     setTimeout(function () {
         console.debug(`loading ${el.getAttribute("target")} ...`);
-        setContentText(`${host}/${el.getAttribute("target")}`);
+        setContentText(`${host}/web_history/${el.getAttribute("target")}`);
     }, 200);
     setTimeout(function () {
         console.debug("show viewer");
