@@ -1,6 +1,8 @@
 var pageContent = document.getElementById("page-content");
+var host = `${window.location.protocol}//${window.location.hostname}/`;
+console.debug("Host" + host)
 
-window.onpointermove = function () {
+window.load = function () {
     var elements = document.getElementsByTagName('*'), i;
     for (i in elements) {
         if (elements[i].hasAttribute && elements[i].hasAttribute('target')) {
@@ -25,7 +27,7 @@ function toggleButton(el) {
     el.classList = ["button-active"];
     setTimeout(function () {
         console.debug(`loading ${el.getAttribute("target")} ...`);
-        setContentText(`http://localhost/web_history/${el.getAttribute("target")}`);
+        setContentText(`${host}/${el.getAttribute("target")}`);
     }, 200);
     setTimeout(function () {
         console.debug("show viewer");
