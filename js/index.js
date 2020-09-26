@@ -1,8 +1,8 @@
 var pageContent = document.getElementById("page-content");
 var host = `${window.location.protocol}//${window.location.hostname}/`;
-console.debug("Host" + host)
+console.debug("Host : " + host)
 
-window.load = function () {
+window.onload = function () {
     var elements = document.getElementsByTagName('*'), i;
     for (i in elements) {
         if (elements[i].hasAttribute && elements[i].hasAttribute('target')) {
