@@ -1,9 +1,12 @@
 var pageContent = document.getElementById("page-content");
 var host = `${window.location.protocol}//${window.location.hostname}/`;
-console.debug("Host : " + host)
+console.debug("Host : " + host);
 
-window.onload = function () {
-    var elements = document.getElementsByTagName('*'), i;
+window.onload = function () { loadButtons(document); }
+
+function loadButtons(el) {
+    console.debug("loadButtons()");
+    var elements = el.getElementsByTagName('*'), i;
     for (i in elements) {
         if (elements[i].hasAttribute && elements[i].hasAttribute('target')) {
             elements[i].onclick = function () {
@@ -45,6 +48,7 @@ function setContentText(url) {
             console.debug("loading complete");
             pageContent.innerHTML = request.responseText;
             console.debug("page content set");
+            loadButtons(pageContent);
         }
     }
 }
