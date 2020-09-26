@@ -7,7 +7,7 @@ var btn_page = {
     "introduction": "./introduction.html",
     "sommaire": "./sommaire.html",
     "informations": "./informations.html"
-}
+};
 
 function toggleButton(el) {
     viewer.classList.toggle("hide");
@@ -17,9 +17,9 @@ function toggleButton(el) {
     el.classList = ["button-active"];
     setTimeout(function () {
         viewer.src = btn_page[el.id];
-    }, 250)
-
+    }, 250);
     setTimeout(function () {
         viewer.classList.toggle("hide");
-    }, 500)
+    }, 500
+    );
 }
