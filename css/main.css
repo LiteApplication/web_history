@@ -101,11 +101,11 @@ header .button:active {
     margin-left: 0;
 }
 
-#viewer {
+#page-content {
     opacity: 1;
     transition: opacity 0.25s, transform 1s ease-in-out;
 }
-#viewer.hide {
+#page-content.hide {
     transform: translateY(-1em);
     opacity: 0;
 }

@@ -1,25 +1,34 @@
 var introduction = document.getElementById("introduction");
 var sommaire = document.getElementById("sommaire");
 var informations = document.getElementById("informations");
-var viewer = document.getElementById("viewer");
-viewer.src = "./blank.html";
+var pageContent = document.getElementById("page-content");
 var btn_page = {
-    "introduction": "./introduction.html",
-    "sommaire": "./sommaire.html",
-    "informations": "./informations.html"
+    "introduction": "/introduction.html",
+    "sommaire": "/sommaire.html",
+    "informations": "/informations.html"
 };
 
 function toggleButton(el) {
-    viewer.classList.toggle("hide");
+    pageContent.classList.toggle("hide");
     introduction.classList = ["button"];
     sommaire.classList = ["button"];
     informations.classList = ["button"];
     el.classList = ["button-active"];
     setTimeout(function () {
-        viewer.src = btn_page[el.id];
+        setContentText(`http://localhost/web_history${btn_page[el.id]}`);
     }, 250);
     setTimeout(function () {
-        viewer.classList.toggle("hide");
-    }, 500
-    );
+        pageContent.classList.toggle("hide");
+    }, 500);
+}
+
+function setContentText(url) {
+    var request = new XMLHttpRequest();
+    request.open('GET', url, true);
+    request.send(null);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4 && request.status === 200) {
+            pageContent.innerHTML =  request.responseText;
+        }
+    }
 }
