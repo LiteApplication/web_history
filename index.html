@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="css/product-sans.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Web History</title>
@@ -24,18 +24,21 @@
         </div>
         <div class="half-width full-height">
             <div class="full-width" style="height: 10em;">
-                <div onclick="toggleButton(this)" id="introduction" class="button">
+                <!-- button class is not needed because it's automatically added on
+                page load but we add it because it improves look on loading-->
+                <div class="button" target="pages/introduction.html">
                     <span>Introduction</span>
                 </div>
-                <div onclick="toggleButton(this)" id="sommaire" class="button">
+                <div class="button" target="pages/sommaire.html">
                     <span>Sommaire</span>
                 </div>
-                <div onclick="toggleButton(this)" id="informations" class="button">
+                <div class="button" target="pages/informations.html">
                     <span>Informations</span>
                 </div>
             </div>
     </header>
     <div class="full-height full-width" id="page-content">
+
     </div>
     <script src="js/index.js"></script>
 </body>

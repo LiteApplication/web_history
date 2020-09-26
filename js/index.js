@@ -1,24 +1,36 @@
-var introduction = document.getElementById("introduction");
-var sommaire = document.getElementById("sommaire");
-var informations = document.getElementById("informations");
 var pageContent = document.getElementById("page-content");
-var btn_page = {
-    "introduction": "/introduction.html",
-    "sommaire": "/sommaire.html",
-    "informations": "/informations.html"
-};
 
+window.onpointermove = function () {
+    var elements = document.getElementsByTagName('*'), i;
+    for (i in elements) {
+        if (elements[i].hasAttribute && elements[i].hasAttribute('target')) {
+            elements[i].onclick = function () {
+                toggleButton(this);
+            }
+        }
+    }
+}
 function toggleButton(el) {
+    console.info("called toggleButton");
+    console.debug("resetting styles");
+    var elements = document.getElementsByTagName('*'), i;
+    for (i in elements) {
+        if (elements[i].hasAttribute && elements[i].hasAttribute('target')) {
+            elements[i].classList = ["button"];
+        }
+    }
+    console.debug("hide viewer");
     pageContent.classList.toggle("hide");
-    introduction.classList = ["button"];
-    sommaire.classList = ["button"];
-    informations.classList = ["button"];
+    console.debug("set button style to active");
     el.classList = ["button-active"];
     setTimeout(function () {
-        setContentText(`http://localhost/web_history${btn_page[el.id]}`);
-    }, 250);
+        console.debug(`loading ${el.getAttribute("target")} ...`);
+        setContentText(`http://localhost/web_history/${el.getAttribute("target")}`);
+    }, 200);
     setTimeout(function () {
+        console.debug("show viewer");
         pageContent.classList.toggle("hide");
+
     }, 500);
 }
 
@@ -28,7 +40,9 @@ function setContentText(url) {
     request.send(null);
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
-            pageContent.innerHTML =  request.responseText;
+            console.debug("loading complete");
+            pageContent.innerHTML = request.responseText;
+            console.debug("page content set");
         }
     }
 }
