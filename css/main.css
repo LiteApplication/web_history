@@ -1,6 +1,11 @@
 body {
     background-color: black;
     color: white;
+    background-image: url("../img/bg.png");
+    background-size: 75%;
+    background-image: linear-gradient( to left, rgba(0, 0, 0, 0) -100%, rgba(0, 0, 0, 1) 45%), url("../img/bg.png");
+    background-repeat: repeat-y;
+    background-position-x: 125%;
 }
 
 header {
@@ -107,6 +112,7 @@ header h3 {
     opacity: 1;
     transition: opacity 0.25s, transform 1s ease-in-out;
 }
+
 #page-content.hide {
     transform: translateY(-1em);
     opacity: 0;
