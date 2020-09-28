@@ -18,7 +18,7 @@ function toggleButton(el) { // définit fonction qui charge les pages et maintie
     var elements = document.getElementsByTagName('*'), i; // récupère tous les éléments sous el
     for (i in elements) {
         if (elements[i].hasAttribute && elements[i].hasAttribute('target')) {
-            elements[i].classList = ["button"];
+            elements[i].classList = ["button"]; // On supprime toutes les classes CSS appliquées au boutton et on met "buttton" à la place
         }
     }
     pageContent.classList.toggle("hide"); // cache toi
