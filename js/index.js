@@ -4,9 +4,9 @@ var host = `${window.location.protocol}//${window.location.hostname}/`; // fais 
 window.onload = function () { loadButtons(document); } // Initialise les boutons
 
 function loadButtons(el) { // fonction d'initalisation des boutons
-    var elements = el.getElementsByTagName('*'), i;
-    for (i in elements) {
-        if (elements[i].hasAttribute && elements[i].hasAttribute('target')) {
+    var elements = el.getElementsByTagName('*'), i; // récupère tous les éléments de la page et stock dans une variable
+    for (i in elements) { // Enn math, ça donne i --> n elements --> U elements[i] = U(n) = un élément de la page en particulier
+        if (elements[i].hasAttribute && elements[i].hasAttribute('target')) { //Si l'element à des attributs et si il a un attribut target
             elements[i].onclick = function () {
                 toggleButton(this); // execute la fonction qui charge les pages et maintient les boutons
             }
