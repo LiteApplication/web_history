@@ -49,5 +49,8 @@ function setContentText(url) { // comme je le disais avant c'est une fonction qu
             pageContent.innerHTML = request.responseText; // on copie le contenu de la réponse (ce sera le contenu de la page) dans notre pageContent
             loadButtons(pageContent); // On vérifie si il y a des boutons dans la page qu'on vient de charger et si oui, on les affiche correctement
         }
+        if (request.readyState === 4 && request.status === 404) { // si il y a une erreur 404 : affiche un message au lieu de ne rien faire
+            setContentText(`${host}/web_history/undefined`) // On charge la page d'erreur
+        }
     }
 }
