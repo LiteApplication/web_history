@@ -1,3 +1,4 @@
+<!-- This page is used to avoid uggly error messages if some JS fail -->
 <div style="margin: 5em; color: red; background-color: white; padding: 1em; font-family: monospace;">
     <h1 style="color: red;">Error</h1>
     <p>Une erreur est survenue lors du chargement de la page.</p><p> Veuillez réessayer</p>
