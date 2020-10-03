@@ -33,10 +33,6 @@ function toggleButton(el) { // définit fonction qui charge les pages et maintie
         //  Partie 2:
         //      setContentText(url) : fonction créée par mes soins qui copie le contenu de la page située à "url" dans le div pageContent
     }, 200);
-    setTimeout(function () { // Attend 500ms avant d'executer cette fonction (le temps que la page charge)
-        pageContent.classList.toggle("hide"); // Décache toi
-
-    }, 500);
 }
 
 function setContentText(url) { // comme je le disais avant c'est une fonction qui récupère la page dont l'URL est url (ici, url est une variable) et copie son contenu dans pageContent
@@ -48,6 +44,8 @@ function setContentText(url) { // comme je le disais avant c'est une fonction qu
         if (request.readyState === 4 && request.status === 200) { // si la lettre est arrivée (readyState = 4) et qu'il n'y a pas eu d'erreur (status = 200)
             pageContent.innerHTML = request.responseText; // on copie le contenu de la réponse (ce sera le contenu de la page) dans notre pageContent
             loadButtons(pageContent); // On vérifie si il y a des boutons dans la page qu'on vient de charger et si oui, on les affiche correctement
+            console.debug("Show")
+            pageContent.classList.toggle("hide"); // Décache toi (On ne montre la page que quand elle est)
         }
         if (request.readyState === 4 && request.status === 404) { // si il y a une erreur 404 : affiche un message au lieu de ne rien faire
             setContentText(`${host}/web_history/undefined`) // On charge la page d'erreur
