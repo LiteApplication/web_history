@@ -8,6 +8,14 @@ body {
     background-position-x: 125%;
 }
 
+/* Cache la barre de scroll */
+html {
+    scrollbar-width: none; /* Firefox */
+}
+::-webkit-scrollbar { /* Chrome, Edge, Opera, Safari */
+    width: 0px; 
+}
+
 header {
     width: 100%;
     height: auto;
