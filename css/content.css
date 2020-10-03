@@ -1,0 +1,26 @@
+#page-content {
+    padding-left: 5vw;
+    padding-right: 10vw;
+}
+#page-content p {
+    margin-left: 2.5vw;
+    font-size: 1.75em;
+    width: 80vw;
+}
+#page-content h1 {
+    font-size: 2.5em;
+}
+#page-content a:link {
+    text-decoration: none;
+    color: inherit;
+}
+#page-content a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+#page-content .zoom {
+    transition: all 2s ease-in-out;
+}
+#page-content .zoom:hover {
+    transform: scale(1.05);
+}
