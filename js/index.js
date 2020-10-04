@@ -44,7 +44,6 @@ function setContentText(url) { // comme je le disais avant c'est une fonction qu
         if (request.readyState === 4 && request.status === 200) { // si la lettre est arrivée (readyState = 4) et qu'il n'y a pas eu d'erreur (status = 200)
             pageContent.innerHTML = request.responseText; // on copie le contenu de la réponse (ce sera le contenu de la page) dans notre pageContent
             loadButtons(pageContent); // On vérifie si il y a des boutons dans la page qu'on vient de charger et si oui, on les affiche correctement
-            console.debug("Show")
             pageContent.classList.toggle("hide"); // Décache toi (On ne montre la page que quand elle est)
         }
         if (request.readyState === 4 && request.status === 404) { // si il y a une erreur 404 : affiche un message au lieu de ne rien faire
