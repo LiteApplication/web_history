@@ -1,6 +1,9 @@
 var pageContent = document.getElementById("page-content"); // Met le div pageContent dans une variable
 var host = `${window.location.protocol}//${window.location.hostname}/`; // fais en sorte que le site reste sur un domaine (claj-ndc.github.io ou localhost pour les tests en local)
-
+if (host === "file:///") { // Si on accede au site depuis file:///
+    window.location = "https://claj-ndc.github.io/web_history/"; // Redirrection sur github.io
+    // host = window.location.href.substring(0, window.location.href.length-11) // Ne marche pas pour des raisons de sécurité
+}
 window.onload = function () { loadButtons(document); } // Initialise les boutons
 
 function loadButtons(el) { // fonction d'initalisation des boutons
@@ -32,7 +35,7 @@ function toggleButton(el) { // définit fonction qui charge les pages et maintie
         //    Resultat : https://claj-ndc.github.io/web_history/pages/informations.html
         //  Partie 2:
         //      setContentText(url) : fonction créée par mes soins qui copie le contenu de la page située à "url" dans le div pageContent
-    }, 200);
+    }, 500);
 }
 
 function setContentText(url) { // comme je le disais avant c'est une fonction qui récupère la page dont l'URL est url (ici, url est une variable) et copie son contenu dans pageContent
