@@ -1,14 +1,14 @@
 var pageContent = document.getElementById("page-content"); // Met le div pageContent dans une variable
 var host = `${window.location.protocol}//${window.location.hostname}/`; // fais en sorte que le site reste sur un domaine (claj-ndc.github.io ou localhost pour les tests en local)
 if (host === "file:///") { // Si on accede au site depuis file:///
-    window.location = "https://claj-ndc.github.io/web_history/"; // Redirrection sur github.io
+    window.location = "https://claj-ndc.github.io/web_history/"; // Redirection sur github.io
     // host = window.location.href.substring(0, window.location.href.length-11) // Ne marche pas pour des raisons de sécurité
 }
 window.onload = function () { loadButtons(document); } // Initialise les boutons
 
 function loadButtons(el) { // fonction d'initalisation des boutons
     var elements = el.getElementsByTagName('*'), i; // récupère tous les éléments de la page et stock dans une variable
-    for (i in elements) { // Enn math, ça donne i --> n elements --> U elements[i] = U(n) = un élément de la page en particulier
+    for (i in elements) { // En math, ça donne i --> n elements --> U elements[i] = U(n) = un élément de la page en particulier
         if (elements[i].hasAttribute && elements[i].hasAttribute('target')) { //Si l'element à des attributs et si il a un attribut target
             elements[i].onclick = function () {
                 toggleButton(this); // execute la fonction qui charge les pages et maintient les boutons
