@@ -114,6 +114,6 @@ header h3 {
 }
 
 #page-content.hide {
-    transform: translateY(-3em);
+    transform: translateY(-2em);
     opacity: 0;
 }

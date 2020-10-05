@@ -20,9 +20,12 @@
     text-decoration: none;
     color: inherit;
 }
-#page-content .zoom {
+#page-content p {
     transition: all 2s ease-in-out;
 }
-#page-content .zoom:hover {
+#page-content p:hover {
     transform: scale(1.05);
+}
+#page-content #large-button {
+    font-style: 1.5em;
 }
