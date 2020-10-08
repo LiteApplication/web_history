@@ -12,7 +12,8 @@ header {
     width: 100%;
     height: auto;
     display: flex;
-    padding-top: 10em;
+    flex-wrap: wrap;
+    padding-top: 10vh;
 }
 
 .half-width {
@@ -35,11 +36,13 @@ header {
 header h1 {
     margin: 0;
     font-size: 4em;
+    white-space: nowrap;
 }
 
 header h3 {
     margin: 0;
     font-size: 2em;
+    white-space: nowrap;
 }
 
 #favicon {
@@ -53,6 +56,7 @@ header h3 {
     height: 100%;
     margin-top: auto;
     margin-bottom: auto;
+    width: fit-content;
 }
 
 #image-header {
@@ -108,12 +112,17 @@ header h3 {
     margin-left: 1em;
 }
 
-#page-content {
-    opacity: 1;
-    transition: opacity 0.5s, transform 3s ease-in-out;
-}
-
-#page-content.hide {
-    transform: translateY(-2em);
-    opacity: 0;
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+        white-space: nowrap;
+    }
+    header h3 {
+        font-size: 1.25em;
+        white-space: nowrap;
+    }
+    .button {
+        width: 100%;
+        font-size: .75em;
+    }
 }
