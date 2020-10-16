@@ -165,6 +165,7 @@ header h3 {
     background-position: 58% 50%;
     background-size: 500%;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 @keyframes color-background-loop {
